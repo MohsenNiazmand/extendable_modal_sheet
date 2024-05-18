@@ -43,8 +43,10 @@ class ExtendableModalSheet extends StatefulWidget {
   State<ExtendableModalSheet> createState() => _ExtendableModalSheetState();
 }
 
-class _ExtendableModalSheetState extends State<ExtendableModalSheet> with SingleTickerProviderStateMixin {
-  final DraggableScrollableController scrollController = DraggableScrollableController();
+class _ExtendableModalSheetState extends State<ExtendableModalSheet>
+    with SingleTickerProviderStateMixin {
+  final DraggableScrollableController scrollController =
+      DraggableScrollableController();
   bool rounded = true;
 
   @override
@@ -60,7 +62,8 @@ class _ExtendableModalSheetState extends State<ExtendableModalSheet> with Single
   }
 
   void _handleScrollable() {
-    if ((MediaQuery.sizeOf(context).height - scrollController.pixels) < (widget.turningRadiusPoint!)) {
+    if ((MediaQuery.sizeOf(context).height - scrollController.pixels) <
+        (widget.turningRadiusPoint!)) {
       setState(() {
         rounded = false;
       });
@@ -73,7 +76,8 @@ class _ExtendableModalSheetState extends State<ExtendableModalSheet> with Single
 
   @override
   Widget build(BuildContext context) {
-    final filter = widget.backdropFilter ?? ImageFilter.blur(sigmaX: 6, sigmaY: 6);
+    final filter =
+        widget.backdropFilter ?? ImageFilter.blur(sigmaX: 6, sigmaY: 6);
     return BackdropFilter(
       filter: filter,
       blendMode: widget.blendMode!,
@@ -87,25 +91,28 @@ class _ExtendableModalSheetState extends State<ExtendableModalSheet> with Single
         minChildSize: widget.minChildSize!,
         maxChildSize: widget.maxChildSize!,
         shouldCloseOnMinExtent: widget.shouldCloseOnMinExtent!,
-        builder: (BuildContext context, ScrollController scrollController) => AnimatedContainer(
-            padding: widget.contentPadding,
-            decoration: BoxDecoration(
-                color: widget.backgroundColor,
-                borderRadius: !rounded
-                    ? BorderRadius.zero
-                    : BorderRadius.only(topRight: Radius.circular(widget.cornersRadius!), topLeft: Radius.circular(widget.cornersRadius!))),
-            duration: const Duration(milliseconds: 350),
-            child: Column(
-              children: [
-                Expanded(
-                  child: SingleChildScrollView(
-                    controller: scrollController,
-                    child: widget.mainWidget,
-                  ),
-                ),
-                widget.bottomWidget ?? const SizedBox()
-              ],
-            )),
+        builder: (BuildContext context, ScrollController scrollController) =>
+            AnimatedContainer(
+                padding: widget.contentPadding,
+                decoration: BoxDecoration(
+                    color: widget.backgroundColor,
+                    borderRadius: !rounded
+                        ? BorderRadius.zero
+                        : BorderRadius.only(
+                            topRight: Radius.circular(widget.cornersRadius!),
+                            topLeft: Radius.circular(widget.cornersRadius!))),
+                duration: const Duration(milliseconds: 350),
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: SingleChildScrollView(
+                        controller: scrollController,
+                        child: widget.mainWidget,
+                      ),
+                    ),
+                    widget.bottomWidget ?? const SizedBox()
+                  ],
+                )),
       ),
     );
   }
