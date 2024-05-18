@@ -1,6 +1,6 @@
 name: extendable_modal_sheet
 description: "Extendable Modal Sheet"
-publish_to: https://github.com/MohsenNiazmand/extendable_modal_sheet
+repository: https://github.com/MohsenNiazmand/extendable_modal_sheet
 version: 1.0.0
 
 environment:
