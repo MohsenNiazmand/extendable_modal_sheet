@@ -1,7 +1,7 @@
 name: extendable_modal_sheet
 description: "Extendable Modal Sheet"
 repository: https://github.com/MohsenNiazmand/extendable_modal_sheet
-version: 1.0.0
+version: 1.0.1
 
 environment:
   sdk: '>=3.3.3 <4.0.0'

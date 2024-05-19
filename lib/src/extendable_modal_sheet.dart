@@ -10,8 +10,10 @@ class ExtendableModalSheet extends StatefulWidget {
     this.minChildSize = 0.25,
     this.maxChildSize = 1.0,
     this.turningRadiusPoint = 80,
+    this.radiusChangeAnimationDuration=const Duration(milliseconds: 350),
+    this.backgroundColor = Colors.white,
     this.cornersRadius = 24,
-    this.contentPadding = const EdgeInsets.fromLTRB(16, 24, 16, 20),
+    this.contentPadding = EdgeInsets.zero,
     this.backdropFilter,
     this.dismissible = true,
     this.blendMode = BlendMode.srcOver,
@@ -19,7 +21,6 @@ class ExtendableModalSheet extends StatefulWidget {
     this.snapAnimationDuration,
     this.snapSizes,
     this.shouldCloseOnMinExtent = true,
-    this.backgroundColor = Colors.white,
   });
 
   final Widget mainWidget;
@@ -28,6 +29,7 @@ class ExtendableModalSheet extends StatefulWidget {
   final double? minChildSize;
   final double? maxChildSize;
   final double? turningRadiusPoint;
+  final Duration? radiusChangeAnimationDuration;
   final double? cornersRadius;
   final EdgeInsets? contentPadding;
   final ImageFilter? backdropFilter;
@@ -101,7 +103,7 @@ class _ExtendableModalSheetState extends State<ExtendableModalSheet>
                         : BorderRadius.only(
                             topRight: Radius.circular(widget.cornersRadius!),
                             topLeft: Radius.circular(widget.cornersRadius!))),
-                duration: const Duration(milliseconds: 350),
+                duration:  widget.radiusChangeAnimationDuration!,
                 child: Column(
                   children: [
                     Expanded(
