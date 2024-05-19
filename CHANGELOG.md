@@ -1,3 +1,6 @@
+  1.0.2
+• just readme fixed  
+
 
   1.0.1 
 • radiusChangeAnimationDuration added to attributes
