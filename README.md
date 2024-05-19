@@ -19,23 +19,23 @@ Customizable scroll attributes to create desired modal sheet
 
 ## Properties
 
-**mainWidget**: The main content of the modal sheet.
-**bottomWidget**: An optional widget to display at the bottom of the modal sheet.
-**initialChildSize**: The initial size of the modal sheet relative to the parent container (default: 0.5).
-**minChildSize**: The minimum size of the modal sheet relative to the parent container (default: 0.25).
-**maxChildSize**: The maximum size of the modal sheet relative to the parent container (default: 1.0).
-**turningRadiusPoint**: The point at which the corners' radius should change (default: 80).
-**cornersRadius**: The radius of the modal sheet's corners (default: 24).
-**radiusChangeAnimationDuration**:The duration of the changing modal's radiuses(default : Duration ( milliseconds: 350 ).
-**contentPadding**: Padding for the content inside the modal sheet (default: EdgeInsets.zero).
-**backdropFilter**: An optional backdrop filter to apply (default: ImageFilter.blur(sigmaX: 6, sigmaY: 6)).
-**dismissible**: Whether the modal sheet can be dismissed by the user (default: true).
-**blendMode**: The blend mode to use for the backdrop filter (default: BlendMode.srcOver).
-**snap**: Whether the modal sheet should snap to predefined sizes (default: false).
-**snapAnimationDuration**: The duration of the snapping animation (default: null).
-**snapSizes**: A list of sizes to snap to (default: null).
-**shouldCloseOnMinExtent**: Whether the modal sheet should close when reaching the minimum extent (default: true).
-**backgroundColor**: The background color of the modal sheet (default: Colors.white).
+- **mainWidget**: The main content of the modal sheet.
+- **bottomWidget**: An optional widget to display at the bottom of the modal sheet.
+- **initialChildSize**: The initial size of the modal sheet relative to the parent container (default: 0.5).
+- **minChildSize**: The minimum size of the modal sheet relative to the parent container (default: 0.25).
+- **maxChildSize**: The maximum size of the modal sheet relative to the parent container (default: 1.0).
+- **turningRadiusPoint**: The point at which the corners' radius should change (default: 80).
+- **cornersRadius**: The radius of the modal sheet's corners (default: 24).
+- **radiusChangeAnimationDuration**:The duration of the changing modal's radius(default : Duration ( milliseconds: 350 ).
+- **contentPadding**: Padding for the content inside the modal sheet (default: EdgeInsets.zero).
+- **backdropFilter**: An optional backdrop filter to apply (default: ImageFilter.blur(sigmaX: 6, sigmaY: 6)).
+- **dismissible**: Whether the modal sheet can be dismissed by the user (default: true).
+- **blendMode**: The blend mode to use for the backdrop filter (default: BlendMode.srcOver).
+- **snap**: Whether the modal sheet should snap to predefined sizes (default: false).
+- **snapAnimationDuration**: The duration of the snapping animation (default: null).
+- **snapSizes**: A list of sizes to snap to (default: null).
+- **shouldCloseOnMinExtent**: Whether the modal sheet should close when reaching the minimum extent (default: true).
+- **backgroundColor**: The background color of the modal sheet (default: Colors.white).
 
 
 ## Usage

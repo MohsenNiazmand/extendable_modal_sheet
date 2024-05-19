@@ -10,7 +10,7 @@ class ExtendableModalSheet extends StatefulWidget {
     this.minChildSize = 0.25,
     this.maxChildSize = 1.0,
     this.turningRadiusPoint = 80,
-    this.radiusChangeAnimationDuration=const Duration(milliseconds: 350),
+    this.radiusChangeAnimationDuration = const Duration(milliseconds: 350),
     this.backgroundColor = Colors.white,
     this.cornersRadius = 24,
     this.contentPadding = EdgeInsets.zero,
@@ -103,7 +103,7 @@ class _ExtendableModalSheetState extends State<ExtendableModalSheet>
                         : BorderRadius.only(
                             topRight: Radius.circular(widget.cornersRadius!),
                             topLeft: Radius.circular(widget.cornersRadius!))),
-                duration:  widget.radiusChangeAnimationDuration!,
+                duration: widget.radiusChangeAnimationDuration!,
                 child: Column(
                   children: [
                     Expanded(
